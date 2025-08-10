@@ -1,12 +1,121 @@
-# React + Vite
+WealthManager.online – Portfolio Analytics Dashboard 💹
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey folks! 👋
 
-Currently, two official plugins are available:
+I’m excited to share my Full-Stack Developer Intern Assignment implementation for WealthManager.online — a sleek, user-friendly dashboard that gives investors a crystal-clear view of their stock portfolio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Think of it as your personal finance sidekick 🦸‍♂️ — tracking holdings, allocations, performance, and insights, all in one place.
+🚀 Project Overview
 
-## Expanding the ESLint configuration
+This Portfolio Analytics Dashboard is built to help investors (especially in the Indian stock market) track and analyze their investments effortlessly.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It uses sample portfolio data (e.g., RELIANCE, INFY) to display:
+
+    📄 Holdings – Detailed list of stocks with gains/losses.
+
+    📊 Allocations – Breakdowns by sector and market cap.
+
+    📈 Performance – Comparisons against benchmarks like Nifty 50 and Gold.
+
+    ⚡ Summary – Quick metrics like total value, top performers, and risk levels.
+
+💡 The goal: Simplify investment tracking without drowning in spreadsheets.
+✨ Features
+Backend – Portfolio Data Service API
+
+    GET /api/portfolio/holdings – Lists all stock holdings with values, gains, and % changes.
+
+    GET /api/portfolio/allocation – Asset distribution by sector and market cap.
+
+    GET /api/portfolio/performance – Historical returns vs benchmarks.
+
+    GET /api/portfolio/summary – Key metrics like total value & diversification score.
+
+    Built with:
+
+        Error handling (404 for invalid routes)
+
+        Data validation
+
+        Well-commented logic for calculations (gain/loss, returns, etc.)
+
+    Scalable – Currently uses static JSON, but ready for database integration (MongoDB).
+
+Frontend – Interactive Dashboard
+
+    Overview Cards – Big, bold stats for total value, gain/loss (color-coded), performance %, and holdings count.
+
+    Pie Charts – Sector & market cap allocations (with hover tooltips).
+
+    Holdings Table – Sortable, searchable, filterable with color-coded performance.
+
+    Performance Chart – Line chart for benchmarks + bar charts for return periods.
+
+    Top Performers – Best/worst stocks & diversification insights.
+
+    Responsive Design – Works perfectly on desktop and mobile.
+
+    User Experience – Smooth interactions, hover effects, loading spinners, and friendly error messages.
+
+🛠️ Tech Stack
+
+Backend:
+
+    Node.js
+
+    Express.js
+
+Frontend:
+
+    React.js
+
+    Tailwind CSS
+
+Charts:
+
+    Chart.js
+
+Other Tools:
+
+    Axios (API calls)
+
+    React Table (data grid)
+
+    Render.com (backend hosting)
+
+    Vercel (frontend hosting)
+
+📦 Installation & Setup
+
+# Install backend dependencies
+
+cd backend
+npm install
+npm start
+
+# Install frontend dependencies
+
+cd frontend
+npm install
+npm run dev
+
+The backend runs on http://localhost:5000
+The frontend runs on http://localhost:5173 (Vite default)
+📷 Screenshots
+
+(Add your screenshots here for visual impact)
+🌟 Highlights
+
+    Clean, modular codebase for easy scaling.
+
+    Fully interactive & mobile-friendly.
+
+    Clear data visualizations for better decision-making.
+
+📌 Future Enhancements
+
+    Connect to live market data APIs.
+
+    Add authentication & user profiles.
+
+    Enable CSV/Excel export of portfolio data.

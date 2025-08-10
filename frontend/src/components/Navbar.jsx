@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -6,38 +5,34 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { path: "/", label: "Overview" },
+    { path: "/", label: "Home" },
     { path: "/allocation", label: "Allocation" },
     { path: "/performance", label: "Performance" },
     { path: "/holdings", label: "Holdings" },
-    { path: "/top-performers", label: "Top Performers" },
+    { path: "/summary", label: "Summary" },
   ];
 
   return (
-    <nav className="bg-gray-900 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo / Brand */}
-          <div className="text-lg font-bold text-blue-400 tracking-wide">
-            Portfolio Dashboard
-          </div>
-
-          {/* Links */}
-          <div className="hidden md:flex gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`${
+    <nav className="bg-gray-900 text-gray-200 shadow-lg w-full sticky top-0 z-50">
+      <div className="flex justify-between items-center h-16 px-8 max-w-7xl mx-auto">
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 text-transparent bg-clip-text">
+          Portfolio Analytics
+        </h1>
+        <div className="flex gap-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`relative px-3 py-2 rounded-md transition-all duration-300 ease-in-out
+                ${
                   location.pathname === link.path
-                    ? "text-blue-400 border-b-2 border-blue-400"
-                    : "hover:text-blue-400"
-                } transition-colors duration-200 pb-1`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+                    ? "bg-gray-200 text-gray-900 font-semibold"
+                    : "hover:bg-gray-100 hover:text-gray-900 text-gray-200"
+                }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

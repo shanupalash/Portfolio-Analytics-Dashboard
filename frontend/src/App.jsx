@@ -10,15 +10,20 @@ import Summary from "./pages/SummaryPage";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/holdings" element={<Holdings />} />
-          <Route path="/allocation" element={<Allocation />} />
-          <Route path="/performance" element={<Performance />} />
-          <Route path="/summary" element={<Summary />} />
-        </Routes>
+      <div className="min-h-screen bg-gray-50">
+        {/* Navbar stays fixed at top */}
+        <Navbar />
+
+        {/* Main content area */}
+        <main className="max-w-7xl mx-auto px-6 py-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/holdings" element={<Holdings />} />
+            <Route path="/allocation" element={<Allocation />} />
+            <Route path="/performance" element={<Performance />} />
+            <Route path="/summary" element={<Summary />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
